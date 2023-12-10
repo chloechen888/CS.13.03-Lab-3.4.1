@@ -1,6 +1,46 @@
 import java.util.LinkedList;
 
 public class CISStack {
+    private LinkedList<Integer> s;
+    private int Size;
+
+    @Override
+    public String toString() {
+        return "CISStack{" +
+                "stack=" + s +
+                ", size=" + Size +
+                '}';
+    }
+
+    public CISStack()
+    {
+        s= new LinkedList<>();
+        Size =0;
+    }
+
+    public void push (int t)
+    {
+        s.addFirst(t);
+        Size++;
+    }
+
+    public int size()
+    {
+        return Size;
+    }
+
+    public Integer pop()
+    {
+        int popop = s.removeFirst();
+        Size--;
+        return popop;
+    }
+    public boolean isEmpty()
+    {
+        return Size==0;
+    }
+
+
 
     // Linked list property.
 
